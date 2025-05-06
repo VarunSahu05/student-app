@@ -1,0 +1,31 @@
+.mark-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.scanner-btn,
+.ok-btn,
+.confirm-btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qr-popup, .form-box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+}
