@@ -14,7 +14,7 @@ const Mark = () => {
   useEffect(() => {
     const storedRoll = localStorage.getItem('studentRoll');
     if (storedRoll) {
-      fetch(`http://localhost:5000/api/students/${storedRoll}`)
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/api/students/${storedRoll}`)
         .then(res => res.json())
         .then(data => setStudentData(data))
         .catch(err => console.error('Error fetching student data:', err));
@@ -47,7 +47,7 @@ const Mark = () => {
       return;
     }
     try {
-      const res = await fetch(`http://localhost:5000/api/teachers/id/${qrData.teacherId}`);
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/teachers/id/${qrData.teacherId}`);
       if (!res.ok) {
         setErrorMsg("Error fetching teacher details.");
         return;
@@ -75,7 +75,7 @@ const Mark = () => {
     };
 
     try {
-      const checkRes = await fetch('http://localhost:5000/api/attendance/check', {
+      const checkRes = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/attendance/check`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -91,7 +91,7 @@ const Mark = () => {
         return; // Stop further execution
       }
 
-      const res = await fetch('http://localhost:5000/api/attendance/mark', {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/attendance/mark`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(attendanceData),

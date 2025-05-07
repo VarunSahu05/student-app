@@ -29,3 +29,31 @@
   color: red;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .mark-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .scanner-btn,
+  .ok-btn,
+  .confirm-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .qr-popup,
+  .form-box {
+    padding: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .qr-popup p,
+  .form-box p {
+    font-size: 0.9rem;
+  }
+
+  .error-msg {
+    font-size: 0.9rem;
+  }
+}

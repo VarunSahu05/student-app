@@ -51,3 +51,39 @@ h2 {
 .back-button:hover {
   background-color: #0056b3;
 }
+@media (max-width: 768px) {
+  .attendance-view-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .status-msg {
+    font-size: 0.9rem;
+  }
+
+  .attendance-view-table {
+    font-size: 0.8rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .attendance-view-table th,
+  .attendance-view-table td {
+    padding: 0.5rem;
+  }
+
+  .back-button-container {
+    padding: 1rem;
+  }
+
+  .back-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}

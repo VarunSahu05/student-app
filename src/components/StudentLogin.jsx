@@ -12,7 +12,7 @@ const StudentLogin = ({ onClose, onLoginSuccess }) => {
     setError('');
 
     try {
-      const res = await fetch(`http://localhost:5000/api/students/verify/${roll}`);
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/students/verify/${roll}`);
       const data = await res.json();
 
       if (res.ok && data.valid) {

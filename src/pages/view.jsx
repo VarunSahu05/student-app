@@ -17,7 +17,7 @@ const ViewAttendance = () => {
     }
 
     try {
-      const res = await fetch(` https://9650-2409-40c4-10b1-6d2f-c456-740f-f50d-ceb9.ngrok-free.app/api/attendance/student/${roll}`);
+      const res = await fetch(`http://localhost:5000/api/attendance/student/${roll}`);
       const data = await res.json();
       const sorted = data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       setRecords(sorted);
