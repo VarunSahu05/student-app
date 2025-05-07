@@ -17,7 +17,7 @@ const ViewAttendance = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/attendance/student/${roll}`);
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/attendance/student/${roll}`);
       const data = await res.json();
       const sorted = data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       setRecords(sorted);
