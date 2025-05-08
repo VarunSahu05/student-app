@@ -32,6 +32,11 @@ const Mark = () => {
     scanner.render((decodedText) => {
       try {
         const parsed = JSON.parse(decodedText);
+        if (!parsed.teacherId || !parsed.subject || !parsed.sessionId || !parsed.department) {
+          setErrorMsg('Missing fields in QR data.');
+          scanner.clear();
+          return;
+        }
         setQrData(parsed);
       } catch {
         setErrorMsg('Invalid QR Code format');
