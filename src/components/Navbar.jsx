@@ -18,4 +18,3 @@ const Navbar = ({ isLoggedIn, onLoginClick, onLogoutClick }) => {
 };
 
 export default Navbar;
-  
